@@ -19,23 +19,30 @@ A warehouse management system built with Django to streamline inventory tracking
 <br>
 <h2>🔧 Installation</h2>
 Follow these steps to set up the project locally:
+<br>
+1️⃣ Clone the Repository<br>
+git clone https://github.com/gunn2522/Boom-barrier.git<br>
+cd Boom-barrier<br>
+<br>
+<br>
 
-1️⃣ Clone the Repository
-git clone https://github.com/gunn2522/Boom-barrier.git
-cd Boom-barrier
 
-2️⃣ Create a Virtual Environment (Recommended)
-python -m venv venv
-source venv/bin/activate   # Mac/Linux
-venv\Scripts\activate      # Windows
+2️⃣ Create a Virtual Environment (Recommended)<br>
+python -m venv venv<br>
+source venv/bin/activate   # Mac/Linux<br>
+venv\Scripts\activate      # Windows<br>
+<br>
 
-3️⃣ Install Dependencies
-pip install -r requirements.txt
 
-4️⃣ Apply Migrations
-python manage.py migrate
+3️⃣ Install Dependencies<br>
+pip install -r requirements.txt<br>
+<br>
 
-5️⃣ Run the Development Server
+4️⃣ Apply Migrations<br>
+python manage.py migrate<br>
+<br>
+<br>
+5️⃣ Run the Development Server<br>
 python manage.py runserver
 <br>
 <br>
