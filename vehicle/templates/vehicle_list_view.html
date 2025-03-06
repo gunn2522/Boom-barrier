@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+<div class="main">
+    <h1>vehicle List</h1>
+<div class="container">
+    <table border="1" class="table table-striped ">
+        <thead>
+            <tr>
+                <th>vehicle_type</th>
+                <th>created_at</th>
+                <th>voucher_type</th>
+                <th>vehicle</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for vehicle in vehicle_list %}
+                <tr>
+                    <td>{{ vehicle.vehicle_type }}</td>
+                    <td>{{ vehicle.created_at }}</td>
+                    <td>{{ vehicle.voucher_type }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="3">No vehicle found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</div>
+    {% endblock %}

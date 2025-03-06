@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GatePass Report</title>
+</head>
+<body>
+<div class="container">
+{% block content %}
+
+
+    <h1>GatePass Report</h1>
+    <form method="get">
+        <label>GatePass Type:</label>
+        <select name="gatepass_type">
+            <option value="">-- All --</option>
+            <option value="Returnable">Returnable</option>
+            <option value="Non-Returnable">Non-Returnable</option>
+        </select>
+        <label>Branch:</label>
+        <input type="text" name="branch" placeholder="Branch ID">
+        <label>Date Range:</label>
+        <input type="date" name="start_date">
+        <input type="date" name="end_date">
+        <button type="submit">Filter</button>
+    </form>
+    <table border="1" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Branch</th>
+                <th>Transaction Date</th>
+                <th>Vehicle</th>
+                <th>Driver</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for gatepass in gatepasses %}
+            <tr>
+                <td>{{ gatepass.name }}</td>
+                <td>{{ gatepass.gatepass_type }}</td>
+                <td>{{ gatepass.branch.name }}</td>
+                <td>{{ gatepass.transaction_date }}</td>
+                <td>{{ gatepass.vehicle.vehicle_number }}</td>
+                <td>{{ gatepass.driver.driver_name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+</div>
+</body>
+</html>

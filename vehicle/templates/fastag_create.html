@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/fastag.css' %}">
+    <style>
+    .form-container{}
+    </style>
+<body>
+{#{% block body %}#}
+    <div class="form-container">
+        {% block body %}
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-container">
+                    {{ form }}
+                    test
+                    <input type="submit" value="submit">
+                </div>
+            </form>
+        {% endblock %}
+    </div>
+</body>
+{% endblock %}

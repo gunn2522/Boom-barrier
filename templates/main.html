@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boom Barrier System</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header class="header_sticky">
+        <nav class="navbar ">
+            <div class="logo">
+                <h1>Boom Barrier</h1>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle"  
+                           id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" 
+                           href="">Gatepass
+                        </a>
+                    
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="{% url 'gatepass_create_view' %}">Create Gate Pass</a></li>
+                            <li><a class="dropdown-item" href="{% url 'gatepass_list_view' %}">All Gatepasses</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle"  
+                           id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" 
+                           href="">Vehicle
+                        </a>
+                    
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="{% url 'vehicle_create_list' %}">Add new vehicle info</a></li>
+                            <li><a class="dropdown-item" href="{% url 'vehicle_list_view' %}">See all vehicles</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle"  
+                           id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" 
+                           href="#">Fastag
+                        </a>
+                    
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="{% url 'fastag_create' %}">Add New Fastag</a></li>
+                            <li><a class="dropdown-item" href="{% url 'fastag_list' %}">See All Fastags</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="{% url 'gatepass_report' %}">Gatepass report</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="main">
+    {% block content %}
+
+
+{#    <main>#}
+{#        <section id="home" class="hero" style="background: #000">#}
+{#            <h2>Welcome to the Boom Barrier System</h2>#}
+{#            <p>Your one-stop solution for managing vehicle access, fastag services, and gatepass generation.</p>#}
+{#        </section>#}
+{##}
+{#        <section>#}
+{#            <div class="row">#}
+{#                <div id="gatepass" class="section col">#}
+{#                    <h3>Gatepass Management</h3>#}
+{#            <p>Generate, track, and manage gatepasses for vehicles entering and exiting your premises.</p>#}
+{#            <a href="#" class="button">Create Gatepass</a>#}
+{#                </div>#}
+{#           #}
+{##}
+{#        <div id="fastags" class="section col">#}
+{#            <h3>Fastag Services</h3>#}
+{#            <p>Recharge, track, and manage your vehicle's Fastag balance and status.</p>#}
+{#            <a href="#" class="button">Manage Fastag</a>#}
+{#        </div>#}
+{##}
+{#        <div id="vehicles" class="section col">#}
+{#            <h3>Vehicle Information</h3>#}
+{#            <p>Register, update, and view vehicle details in the system.</p>#}
+{#            <a href="#" class="button">Manage Vehicles</a>#}
+{#        </div>#}
+{#                 </div>#}
+{##}
+{#        </section>#}
+{##}
+{#    </main>#}
+    {% endblock %}
+</section>
+    <footer class="footer footer_sticky">
+        <p>&copy; 2025 Boom Barrier System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

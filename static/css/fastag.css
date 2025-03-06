@@ -1,0 +1,76 @@
+/* General form styling */
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styling */
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Input fields and select box styling */
+input[type="text"], input[type="number"], input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+/* Special styling for the fastag ID field */
+input[name="fastag_id"] {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Styling for fastag balance */
+input[name="fastag_balance"] {
+    background-color: #e6f7ff;
+    border: 1px solid #00aaff;
+}
+
+/* Styling for fastag status (e.g., active/inactive) */
+select[name="fastag_status"] {
+    background-color: #f0fff0;
+    border: 1px solid #28a745;
+}
+
+/* Date fields styling */
+input[name="valid_till"], input[name="created_at"], input[name="updated_at"] {
+    background-color: #fffaf0;
+    border: 1px solid #ff8c00;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Button hover effect */
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Add spacing between each form field */
+.form-group {
+    margin-bottom: 20px;
+}
